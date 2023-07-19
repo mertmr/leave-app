@@ -16,8 +16,8 @@ function Content() {
     <div>
       <div className="p-4 sm:ml-64">
         <div className="rounded-lg border-2 border-dashed border-gray-200 p-4 dark:border-gray-700">
-          <div className="bg-white-50 flex h-24 flex-col rounded dark:bg-gray-800">
-            <div className="text-black-400 text-2xl dark:text-gray-500">
+          <div className="bg-white-50 flex h-24 flex-col rounded dark:bg-gray-800 mb-4 p-6">
+            <div className="text-black-400 text-2xl dark:text-white-500">
               Hello {user.user?.emailAddresses[0]?.emailAddress}
             </div>
             <div className="text-1xl text-gray-400 dark:text-gray-500">
