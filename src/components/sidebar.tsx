@@ -29,29 +29,34 @@ function Sidebar() {
 
   return (
     <div>
-      <button
-        data-drawer-target="default-sidebar"
-        data-drawer-toggle="default-sidebar"
-        aria-controls="default-sidebar"
-        type="button"
-        onClick={toggleSidebar}
-        className="ml-3 mt-2 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 sm:hidden"
-      >
-        <span className="sr-only">Open sidebar</span>
-        <svg
-          className="h-6 w-6"
-          aria-hidden="true"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
+      <div className="flex justify-between">
+        <button
+          data-drawer-target="default-sidebar"
+          data-drawer-toggle="default-sidebar"
+          aria-controls="default-sidebar"
+          type="button"
+          onClick={toggleSidebar}
+          className="ml-3 mt-2 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 sm:hidden"
         >
-          <path
-            clip-rule="evenodd"
-            fill-rule="evenodd"
-            d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
-          ></path>
-        </svg>
-      </button>
+          <span className="sr-only">Open sidebar</span>
+          <svg
+            className="h-6 w-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              fill-rule="evenodd"
+              d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+            ></path>
+          </svg>
+        </button>
+        <div className="mr-3 mt-2">
+          <ModeToggle />
+        </div>
+      </div>
       {isSidebarOpen && (
         <aside
           id="default-sidebar"
@@ -60,6 +65,10 @@ function Sidebar() {
           aria-label="Sidebar"
         >
           <div className="h-full overflow-y-auto bg-gray-50 px-3 py-4 dark:bg-gray-800">
+            <div className="flex items-center justify-between gap-2 pl-6 pt-6 text-2xl font-semibold">
+              LASS
+            </div>
+            <hr className="my-6 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
             <ul className="space-y-2 font-medium">
               <li>
                 <a
@@ -76,7 +85,7 @@ function Sidebar() {
                     <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
                     <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
                   </svg>
-                  <span className="ml-3">Lass</span>
+                  <span className="ml-3">Home</span>
                 </a>
               </li>
               <li>
@@ -163,7 +172,6 @@ function Sidebar() {
                 </a>
               </li>
             </ul>
-            <ModeToggle />
           </div>
         </aside>
       )}
