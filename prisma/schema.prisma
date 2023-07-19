@@ -15,3 +15,11 @@ model Example {
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
 }
+
+model Leave {
+  id        Int      @id @default(autoincrement())
+  name      String
+  startDate DateTime
+  endDate   DateTime
+  reason    String
+}
