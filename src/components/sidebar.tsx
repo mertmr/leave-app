@@ -1,4 +1,5 @@
 import * as React from "react";
+import { ModeToggle } from "./mode-toggle";
 
 function Sidebar() {
   return (
@@ -50,6 +51,7 @@ function Sidebar() {
               <span className="ml-3">Lass</span>
             </a>
           </li>
+          <ModeToggle/>
           <li>
             <a
               href="#"
