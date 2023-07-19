@@ -15,7 +15,7 @@ function Content() {
   return (
     <div>
       <div className="p-4 sm:ml-64">
-        <div className="rounded-lg border-2 border-dashed border-gray-200 p-4 dark:border-gray-700">
+        <div>
           <div className="bg-white-50 flex h-24 flex-col rounded dark:bg-gray-800 mb-4 p-6">
             <div className="text-black-400 font-semibold text-lg md:text-2xl dark:text-white-500">
               Hello {user.user?.emailAddresses[0]?.emailAddress}
