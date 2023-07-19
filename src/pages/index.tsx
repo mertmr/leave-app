@@ -11,9 +11,8 @@ import Link from "next/link";
 import { api } from "~/utils/api";
 
 export default function Home() {
-  const hello = api.leave.hello.useQuery({ text: "from tRPC" });
-  const leaveList = api.leave.getAll.useQuery();
-  console.log(leaveList.data);
+  const { data } = api.leave.getAll.useQuery();
+  console.log(data);
   const user = useUser();
 
   return (
@@ -26,14 +25,19 @@ export default function Home() {
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
         <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
           <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-           Leave App
+            Leave App
           </h1>
           <div>{!user.isSignedIn && <SignInButton />}</div>
           <SignIn path="/sign-in" routing="path" signUpUrl="/sign-up" />
           <div> {user.isSignedIn && <UserButton afterSignOutUrl="/" />}</div>
           <p className="text-2xl text-white">
-            {hello.data ? hello.data.greeting : "Loading tRPC query..."}
+            {user.isSignedIn ? user.user.fullName : "Signing in..."}
           </p>
+          <div>
+            {data?.map((leave) => (
+              <div>{leave.name} : {leave.reason}</div>
+            ))}
+          </div>
         </div>
       </main>
     </>
