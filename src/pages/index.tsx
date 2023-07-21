@@ -19,13 +19,9 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Leave Application</title>
-        <meta name="description" content="Leave Application Presentation" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Sidebar />
-      <Content />
+      <div>
+        <Content />
+      </div>
     </>
   );
 }
