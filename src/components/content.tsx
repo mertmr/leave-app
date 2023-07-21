@@ -83,14 +83,16 @@ function Content() {
                 </TableRow>
               </TableHeader>
               <TableBody>
-            {data?.map((leave) => (
-                <TableRow>
-                  <TableCell className="font-medium">{leave.id}</TableCell>
-                  <TableCell>{leave.startDate.toLocaleDateString()}</TableCell>
-                  <TableCell>{leave.endDate.toLocaleDateString()}</TableCell>
-                  <TableCell className="text-right">{leave.reason}</TableCell>
-                </TableRow>
-            ))}
+                {data?.map((leave) => (
+                  <TableRow>
+                    <TableCell className="font-medium">{leave.id}</TableCell>
+                    <TableCell>
+                      {leave.startDate.toLocaleDateString()}
+                    </TableCell>
+                    <TableCell>{leave.endDate.toLocaleDateString()}</TableCell>
+                    <TableCell className="text-right">{leave.reason}</TableCell>
+                  </TableRow>
+                ))}
               </TableBody>
             </Table>
           </div>

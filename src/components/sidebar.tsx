@@ -77,8 +77,93 @@ function Sidebar() {
         aria-label="Sidebar"
       >
         <div className="h-full overflow-y-auto bg-gray-50 px-3 py-4 dark:bg-gray-800">
-          <div className="flex items-center justify-between gap-2 pl-6 pt-6 text-2xl font-semibold">
-            LASS
+          <div className="flex flex-row">
+            <div className="pt-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="64px"
+                height="64px"
+                viewBox="0 0 1024 1024"
+                className="icon"
+                version="1.1"
+              >
+                <path
+                  d="M182.067 383.79h664.916v473.911H182.067z"
+                  fill="#FCE3C3"
+                />
+                <path
+                  d="M846.983 857.701H170.007V401.632h676.976v456.069zM189.428 838.28h638.134V421.053H189.428V838.28z"
+                  fill="#300604"
+                />
+                <path
+                  d="M850.483 861.201H166.507V398.132h683.977v463.069z m-676.976-7h669.977V405.132H173.507v449.069z m657.555-12.421H185.929V417.553h645.134V841.78z m-638.133-7h631.134V424.553H192.929V834.78z"
+                  fill="#300604"
+                />
+                <path
+                  d="M179.718 273.282h657.556v138.061H179.718z"
+                  fill="#300604"
+                />
+                <path
+                  d="M840.774 414.844H176.219V269.782h664.556v145.062z m-657.555-7h650.556V276.782H183.219v131.062z"
+                  fill="#300604"
+                />
+                <path
+                  d="M846.983 421.053H170.007V263.572h676.976v157.481z m-657.555-19.421h638.134V282.994H189.428v118.638z"
+                  fill="#300604"
+                />
+                <path
+                  d="M850.483 424.553H166.507v-164.48h683.977v164.48z m-676.976-7h669.977v-150.48H173.507v150.48z m657.555-12.421H185.929V279.494h645.134v125.638z m-638.133-7h631.134V286.494H192.929v111.638z"
+                  fill="#300604"
+                />
+                <path
+                  d="M672.215 190.225h63.426v162.87h-63.426z"
+                  fill="#ED8F27"
+                />
+                <path
+                  d="M745.351 362.806h-82.847V180.514h82.847v182.292z m-63.426-19.421h44.005v-143.45h-44.005v143.45z"
+                  fill="#300604"
+                />
+                <path
+                  d="M281.351 190.225h63.426v162.87h-63.426z"
+                  fill="#ED8F27"
+                />
+                <path
+                  d="M354.487 362.806H271.64V180.514h82.847v182.292z m-63.426-19.421h44.005v-143.45h-44.005v143.45z"
+                  fill="#300604"
+                />
+                <path
+                  d="M688.071 468.427h66.597v66.597h-66.597z"
+                  fill="#B12800"
+                />
+                <path
+                  d="M688.071 596.369h66.597v66.597h-66.597zM688.071 724.31h66.597v66.598h-66.597zM546.156 468.427h66.597v66.597h-66.597z"
+                  fill="#228E9D"
+                />
+                <path
+                  d="M546.156 596.369h66.597v66.597h-66.597z"
+                  fill="#B12800"
+                />
+                <path
+                  d="M546.156 724.31h66.597v66.598h-66.597zM404.239 468.427h66.598v66.597h-66.598z"
+                  fill="#228E9D"
+                />
+                <path
+                  d="M404.239 596.369h66.598v66.597h-66.598z"
+                  fill="#B12800"
+                />
+                <path
+                  d="M404.239 724.31h66.598v66.598h-66.598zM262.323 596.369h66.598v66.597h-66.598z"
+                  fill="#228E9D"
+                />
+                <path
+                  d="M262.323 724.31h66.598v66.598h-66.598z"
+                  fill="#B12800"
+                />
+              </svg>
+            </div>
+            <div className="flex items-center justify-between gap-2 pl-6 pt-6 text-2xl font-semibold">
+              LASS
+            </div>
           </div>
           <hr className="my-6 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
           <ul className="space-y-2 font-medium">
