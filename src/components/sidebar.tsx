@@ -57,7 +57,7 @@ function Sidebar() {
           </svg>
         </button>
         <div></div>
-        {/* <div className="flex flex-row">
+        <div className="flex flex-row">
           <div className="mr-3 mt-2 ">
             <ModeToggle />
           </div>
@@ -66,7 +66,7 @@ function Sidebar() {
               <UserButton afterSignOutUrl="/" />
             </div>
           )}
-        </div> */}
+        </div>
       </div>
       <aside
         id="default-sidebar"
