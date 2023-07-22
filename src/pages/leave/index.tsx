@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { z } from "zod";
 import AutoForm, { AutoFormSubmit } from "~/components/ui/auto-form";
+import { DateRangePicker } from "~/components/ui/date-range-picker";
 import { toast } from "~/components/ui/use-toast";
 
 const formSchema = z.object({
@@ -37,6 +38,14 @@ export default function Index() {
   return (
     <>
       <div>
+        <DateRangePicker
+          onUpdate={(values) => console.log(values)}
+          initialDateFrom={new Date()}
+          initialDateTo={(new Date())}
+          align="start"
+          locale="en-GB"
+          showCompare={false}
+        />
         <AutoForm
           formSchema={formSchema}
           values={values}
