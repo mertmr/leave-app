@@ -1,7 +1,12 @@
 import Head from "next/head";
 import { Sidebar } from "./sidebar";
+import { ReactNode } from "react";
 
-export default function Layout({ children }) {
+interface Props {
+  children?: ReactNode;
+}
+
+export default function Layout({ children }: Props) {
   return (
     <>
       <Head>
