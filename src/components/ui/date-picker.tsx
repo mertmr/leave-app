@@ -12,9 +12,11 @@ import {
 } from "~/components/ui/popover";
 
 export function DatePicker({
+  visible,
   date,
   setDate,
 }: {
+  visible: boolean;
   date?: Date;
   setDate: (date?: Date) => void;
 }) {
@@ -33,12 +35,7 @@ export function DatePicker({
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-auto p-0">
-        <Calendar
-          mode="single"
-          selected={date}
-          onSelect={setDate}
-          initialFocus
-        />
+        <Calendar mode="single" selected={date} onSelect={setDate} />
       </PopoverContent>
     </Popover>
   );
