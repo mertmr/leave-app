@@ -15,7 +15,7 @@ export default function Layout({ children }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Sidebar />
-      <main>{children}</main>
+      <main className="p-4 sm:ml-64">{children}</main>
     </>
   );
 }

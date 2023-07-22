@@ -26,7 +26,7 @@ function Content() {
 
   return (
     <div>
-      <div className="p-4 sm:ml-64">
+      <div>
         <div>
           <div className="bg-white-50 mb-4 flex h-24 flex-col p-6">
             <div className="text-black-400 dark:text-white-500 text-lg font-semibold md:text-2xl">
