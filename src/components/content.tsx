@@ -71,31 +71,6 @@ function Content() {
           <div className="mb-4 grid grid-cols-1 gap-4">
             <Overview />
           </div>
-          <div className="">
-            <Table>
-              <TableCaption>A list of your recent leaves.</TableCaption>
-              <TableHeader>
-                <TableRow>
-                  <TableHead className="w-[100px]">Id</TableHead>
-                  <TableHead>Start Date</TableHead>
-                  <TableHead>End Date</TableHead>
-                  <TableHead className="text-right">Reason</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {data?.map((leave) => (
-                  <TableRow>
-                    <TableCell className="font-medium">{leave.id}</TableCell>
-                    <TableCell>
-                      {leave.startDate.toLocaleDateString()}
-                    </TableCell>
-                    <TableCell>{leave.endDate.toLocaleDateString()}</TableCell>
-                    <TableCell className="text-right">{leave.reason}</TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </div>
           {/* end of content */}
         </div>
       </div>

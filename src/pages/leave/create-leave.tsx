@@ -29,7 +29,7 @@ const formSchema = z.object({
   endDate: z.coerce.date(),
 });
 
-export  function CreateLeave() {
+export default function CreateLeave() {
   const [values, setValues] = useState<Partial<z.infer<typeof formSchema>>>({});
   const { data } = api.leave.getAll.useQuery();
   const ctx = api.useContext();
@@ -64,7 +64,6 @@ export  function CreateLeave() {
           <TableCaption>A list of your recent leaves.</TableCaption>
           <TableHeader>
             <TableRow>
-              <TableHead className="w-[100px]">Id</TableHead>
               <TableHead>Start Date</TableHead>
               <TableHead>End Date</TableHead>
               <TableHead className="text-right">Reason</TableHead>
@@ -73,7 +72,6 @@ export  function CreateLeave() {
           <TableBody>
             {data?.map((leave) => (
               <TableRow key={leave.id}>
-                <TableCell className="font-medium">{leave.id}</TableCell>
                 <TableCell>{leave.startDate.toLocaleDateString()}</TableCell>
                 <TableCell>{leave.endDate.toLocaleDateString()}</TableCell>
                 <TableCell className="text-right">{leave.reason}</TableCell>
