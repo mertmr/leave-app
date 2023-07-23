@@ -70,13 +70,13 @@ function Sidebar() {
         </div>
       </div>
       <aside
-        id="default-sidebar"
-        ref={wrapperRef}
-        className={`fixed left-0 top-0 z-40 h-screen w-64 ${
-          isSidebarOpen ? "block" : "hidden md:block"
-        } `}
-        aria-label="Sidebar"
-      >
+      id="default-sidebar"
+      ref={wrapperRef}
+      className={`fixed left-0 top-0 z-40 h-screen w-64 md:block transition-transform ${
+        isSidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
+      }`}
+      aria-label="Sidebar"
+    >
         <div className="h-full overflow-y-auto bg-gray-50 px-3 py-4 dark:bg-gray-800">
           <div className="flex flex-row">
             <div className="pt-6">

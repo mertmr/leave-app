@@ -3,6 +3,7 @@ import * as React from "react";
 import { useState } from "react";
 import { z } from "zod";
 import AutoForm, { AutoFormSubmit } from "~/components/ui/auto-form";
+import { Button } from "~/components/ui/button";
 import {
   TableCaption,
   TableHeader,
@@ -59,8 +60,14 @@ export default function CreateLeave() {
 
   return (
     <div>
-      <div className="">
-        <Table>
+      <div>
+        <div className="flex flex-row justify-between">
+          <div className="flex justify-center items-center text-lg font-medium">
+          Last 3 Leave
+          </div>
+          <Button>Request New Leave</Button>
+        </div>
+        <Table className="mt-2">
           <TableCaption>A list of your recent leaves.</TableCaption>
           <TableHeader>
             <TableRow>
@@ -80,6 +87,9 @@ export default function CreateLeave() {
           </TableBody>
         </Table>
       </div>
+      <div className="flex justify-center items-center text-lg font-medium mt-4">
+          Create New Leave
+          </div>
       <AutoForm
         formSchema={formSchema}
         values={values}
