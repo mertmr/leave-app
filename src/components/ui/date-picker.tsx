@@ -25,9 +25,6 @@ export function DatePicker({
 
   return (
     <Popover open={isOpen} onOpenChange={(open: boolean) => {
-      // if (!open) {
-      //   resetValues()
-      // }
       setIsOpen(open)
     }}>
       <PopoverTrigger asChild>

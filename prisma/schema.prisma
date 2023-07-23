@@ -12,7 +12,6 @@ datasource db {
 
 model Leave {
     id          Int      @id @default(autoincrement())
-    name        String
     createdDate DateTime @default(now())
     startDate   DateTime
     endDate     DateTime
